@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var ghpages = require('gh-pages');
+
+require('child_process').exec('git rev-parse --short HEAD', (err, commitHash) => {
+  ghpages.publish('build', {
+    branch: 'master',
+    message: `Auto-generated deployment for source commit ${commitHash}`
+  });
+});

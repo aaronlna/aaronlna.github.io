@@ -1,5 +1,6 @@
 {
   "name": "aaronlna.github.io",
+  "homepage": "https://aaronlna.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +9,8 @@
     "react-scripts": "3.0.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "node scripts/deploy",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
